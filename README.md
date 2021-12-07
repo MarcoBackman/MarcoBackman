@@ -15,6 +15,15 @@
 
 </br>
 
+[![MarcoBackman's github stats](https://github-readme-stats.vercel.app/api?username=MarcoBackman&show_icons=true&theme=default)](https://github.com/MarcoBackman/)
+
+</br>
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+
+</br>
+
 ## My current side project is [Model Based IoT](https://github.com/TCC2021SeniorProject)
 
 &nbsp;&nbsp;&nbsp;Model based IoT is a project that converts UPPAAL model into a python code so that user can directly inject the output code to embedded system.
@@ -66,13 +75,3 @@ Following lists are the projects where my contribution was involved.
     - Worked on C language and python
     - Understood the concept of massive-scale bugfix/debugging process
     - Understood the importance of the concise documentation and development infrastructures.
-
-</br>
-</br>
-
-[![MarcoBackman's github stats](https://github-readme-stats.vercel.app/api?username=MarcoBackman&show_icons=true&theme=default)](https://github.com/MarcoBackman/)
-
-</br>
-</br>
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
