@@ -29,7 +29,7 @@
 
 </br>
 
-## My current side project is [Model Based IoT](https://github.com/TCC2021SeniorProject)
+## My current team project is [Model Based IoT](https://github.com/TCC2021SeniorProject)
 
 
 </br>
