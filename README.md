@@ -7,12 +7,15 @@
 
 </br>
 
-[LinkedIn 💼](https://www.linkedin.com/in/sung-jun-tony-baek-9b505b11a/)
+<div>
+    <ul style="display:inline; list-style-type: none;" >
+        <li><a href="https://www.linkedin.com/in/sung-jun-tony-baek-9b505b11a/" style="float:left;padding: 0px 25px;">LinkedIn 💼</a></li>
+        <li><a href="https://tcc2021seniorproject.github.io/" style="float:left;padding: 0px 25px;">Website 🌍</a></li>
+        <li><a href="mailto:sbaek2015@my.fit.edu" style="float:left;padding: 0px 25px;">Email 📬</a></li>
+    </ul>
+</div>
 
-[Website 🌍](https://tcc2021seniorproject.github.io/)
-
-[Email 📬](mailto:sbaek2015@my.fit.edu)
-
+</br>
 </br>
 
 
