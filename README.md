@@ -18,10 +18,10 @@
 
 <div align="center">
     <a href="">
-    <img align="center" height="150" src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&theme=cobalt&show_icons=true" />
+    <img align="center" height="170" src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&theme=cobalt&show_icons=true" />
     </a>
     <a href="">
-    <img align="center" height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact" />
+    <img align="center" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact" />
     </a>
 </div>
 
@@ -41,10 +41,14 @@
     </a>
 </div>
 
+</br>
 
 &nbsp;&nbsp;&nbsp;Model based IoT is a project that converts UPPAAL model into a python code so that user can directly inject the output code to embedded system.
 
-### Which algorithm is applied? And what have I learned?
+</br>
+</br>
+
+### What algorithms are used? What have I learned?
 
 > 1. Application of DFS,BFS, and other heap datastructures to store and traverse objects.
 >
