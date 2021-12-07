@@ -14,13 +14,13 @@
 [Email 📬](mailto:sbaek2015@my.fit.edu)
 
 </br>
+<center>
 
 [![MarcoBackman's github stats](https://github-readme-stats.vercel.app/api?username=MarcoBackman&show_icons=true&theme=default)](https://github.com/MarcoBackman/)
 
-</br>
-
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
+</center>
 
 </br>
 
