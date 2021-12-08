@@ -1,7 +1,7 @@
 
 # Hi, I'm MarcoBackman
 
-**I'm MarcoBackman, a computer sicence student 💻 currently looking for a job on 2022 Summer.**
+**I'm MarcoBackman, a computer sicence student 💻 currently looking for a job for 2022 Summer.**
 
 &nbsp;&nbsp;&nbsp;I mainly focus for ***clean code, Java, Python, Javascript.***
 
