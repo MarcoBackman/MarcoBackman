@@ -70,7 +70,7 @@
 Following lists are the projects where my contribution was involved.
 
 - [D* Lite algoritm analysis](https://github.com/CSE4081-d-star-team)
-  - Coded with ***Java, Python*** and Batch
+  - Coded with ***Python*** using pyGame framwork amd ***Java*** using Swing and AWT frameworks
   - Made GUI for point generators
     - Takes user input in GUI app.
     - Generates text-based map based on user click
@@ -87,15 +87,17 @@ Following lists are the projects where my contribution was involved.
   - Learned about interactive web and secured network communication
   - Collaborated with three other teammembers
 - [Duty Assigner](https://github.com/MarcoBackman/DutyAssigner)
-  - Coded with ***Java*** and Batch
+  - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
   - A calendar UI for assigning duty with registered personnel.
   - Used multiple app windows and interactive UI
   - Used structured data storing algorithm(Object oriented) for each day cell
 - [Mine Sweeper with GUI](https://github.com/MarcoBackman/Mine-Sweeper)
-  - A simple mine sweeper game project with GUI in ***Java***
+  - A simple mine sweeper game project
+  - Coded in ***Java***  using Swing and AWT frameworks with the combination of Batch
   - Interacts with keyboard and mouse listeners
 - [Snake Game with GUI Assigner](https://github.com/MarcoBackman/DutyAssigner)
-  - A simple snake game project with GUI in ***Java***
+  - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
+  - A simple snake game project
   - Interacts with keyboard and mouse listeners
 - [Blender testing and debugging](https://github.com/TeamRocket3)
   - Worked on C language and python
