@@ -95,7 +95,7 @@ Following lists are the projects where my contribution was involved.
   - A simple mine sweeper game project
   - Coded in ***Java***  using Swing and AWT frameworks with the combination of Batch
   - Interacts with keyboard and mouse listeners
-- [Snake Game with GUI Assigner](https://github.com/MarcoBackman/DutyAssigner)
+- [Snake Game with GUI Assigner](https://github.com/MarcoBackman/Snake-Game)
   - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
   - A simple snake game project
   - Interacts with keyboard and mouse listeners
