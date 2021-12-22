@@ -91,6 +91,7 @@ Following lists are the projects where my contribution was involved.
   - A calendar UI for assigning duty with registered personnel.
   - Used multiple app windows and interactive UI
   - Used structured data storing algorithm(Object oriented) for each day cell
+  - Full understanding of Java Calendar package
 - [Mine Sweeper with GUI](https://github.com/MarcoBackman/Mine-Sweeper)
   - A simple mine sweeper game project
   - Coded in ***Java***  using Swing and AWT frameworks with the combination of Batch
@@ -99,6 +100,7 @@ Following lists are the projects where my contribution was involved.
   - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
   - A simple snake game project
   - Interacts with keyboard and mouse listeners
+  - Required to understand the threading process of Java event queue for better optimizations 
 - [Blender testing and debugging](https://github.com/TeamRocket3)
   - Worked on C language and python
   - Understood the concept of massive-scale bugfix/debugging process
