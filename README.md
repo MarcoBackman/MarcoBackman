@@ -72,9 +72,9 @@ Following lists are the projects where my contribution was involved.
 - [D* Lite algoritm analysis](https://github.com/CSE4081-d-star-team)
   - Coded with ***Python*** using pyGame framwork amd ***Java*** using Swing and AWT frameworks
   - Made GUI for point generators
-    - Takes user input in GUI app.
-    - Generates text-based map based on user click
-    - Included dynamic editor for users to interact with the app
+  - Takes user input in GUI app.
+  - Generates text-based map based on user click
+  - Included dynamic editor for users to interact with the app
   - Collaborated with others to implement effective path finding algorithm
 - [KNN Range Search analysis](https://github.com/MarcoBackman/RangeSearchAnalysis)
   - Coded with ***Java*** and Batch
