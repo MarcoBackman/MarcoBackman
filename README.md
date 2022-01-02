@@ -86,11 +86,11 @@ Following lists are the projects where my contribution was involved.
   - Worked on ***AWS EC2*** databsae on Ubuntu machine with ***PostgreSQL***
   - Learned about interactive web and secured network communication
   - Collaborated with three other teammembers
-- [Duty Assigner](https://github.com/MarcoBackman/DutyAssigner)
+- [CalendarUI](https://github.com/MarcoBackman/CalendarUI)
   - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
-  - A calendar UI for assigning duty with registered personnel.
+  - A calendar UI template for multi-purpose usage
   - Used multiple app windows and interactive UI
-  - Used structured data storing algorithm(Object oriented) for each day cell
+  - Used structured data storing algorithm(Object oriented) for efficient search time complexity.
   - Full understanding of Java Calendar package
 - [Mine Sweeper with GUI](https://github.com/MarcoBackman/Mine-Sweeper)
   - A simple mine sweeper game project
