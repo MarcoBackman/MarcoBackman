@@ -18,12 +18,8 @@
 
 
 <div align="center">
-    <a href="">
     <img align="center" height="170" src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&theme=cobalt&show_icons=true" />
-    </a>
-    <a href="">
     <img align="center" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact" />
-    </a>
 </div>
 
 
