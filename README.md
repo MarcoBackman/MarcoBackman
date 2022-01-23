@@ -58,6 +58,8 @@
 > 5. Synchronous and asynchronous function calls
 >
 > 6. Server interaction with Raspberry Pi 4 and wireless devices
+>
+> 7. Application of Java Spring framework with Gradle
 
 </br>
 
