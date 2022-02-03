@@ -18,8 +18,8 @@
 
 
 <div align="center">
-    <img align="center" height="170" src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&theme=cobalt&show_icons=true" />
-    <img align="center" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact" />
+    <img align="center" height="150" src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&theme=cobalt&show_icons=true" />
+    <img align="center" height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact" />
 </div>
 
 
