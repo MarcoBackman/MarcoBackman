@@ -100,6 +100,6 @@ Following lists are the projects where my contribution was involved.
   - Interacts with keyboard and mouse listeners
   - Required to understand the threading process of Java event queue for better optimizations 
 - [Blender testing and debugging](https://github.com/TeamRocket3)
-  - Worked on C language and python
+  - Worked on C/C++ language and python
   - Understood the concept of massive-scale bugfix/debugging process
   - Understood the importance of the concise documentation and development infrastructures.
