@@ -67,6 +67,12 @@
 
 Following lists are the projects where my contribution was involved.
 
+- [Quiz application with Spring Boot Hibernate - mySQL](https://github.com/MarcoBackman/hibernate_quiz_webapp)
+  - Used Criteria and HQL to interact with database to perform efficient ROM.
+  - Used Filter to unauthorized access to the restricted path.
+  - Used JSP and JSTL to enhance object(model) view scripting.
+  - Used MySQL for the DBMS tool.
+
 - [D* Lite algoritm analysis](https://github.com/CSE4081-d-star-team)
   - Coded with ***Python*** using pyGame framework and ***Java*** using Swing and AWT frameworks
   - Made GUI for point generators
