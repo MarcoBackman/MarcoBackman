@@ -1,7 +1,7 @@
 
 # Hi, I'm MarcoBackman
 
-**I'm MarcoBackman, a computer sicence student 💻 currently looking for a job for 2022 Summer.**
+**I'm MarcoBackman, a software developer 💻 currently looking for a project to work on.**
 
 &nbsp;&nbsp;&nbsp;I mainly focus for ***clean code, Java, Python, Javascript.***
 
