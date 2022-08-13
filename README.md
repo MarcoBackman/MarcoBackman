@@ -25,7 +25,7 @@
 
 </br>
 
-## My recent team project is [Model Based IoT](https://github.com/TCC2021SeniorProject)
+## My recent public team project is [Model Based IoT](https://github.com/TCC2021SeniorProject)
 
 
 </br>
