@@ -87,7 +87,7 @@ Following lists are the projects where my contribution was involved.
 - [Embeded web application contest](https://github.com/MarcoBackman/2021ESWContest_webOS_3007)
   - Coded with ***HTML, EJS, CSS, JavaScript***
   - Made server-interactive webapplication
-  - Worked on ***AWS EC2*** databsae on Ubuntu machine with ***PostgreSQL***
+  - Worked on ***AWS EC2*** cloud server on Ubuntu machine with ***PostgreSQL***
   - Learned about interactive web and secured network communication
   - Collaborated with three other teammembers
 - [CalendarUI](https://github.com/MarcoBackman/CalendarUI)
