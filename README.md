@@ -6,7 +6,6 @@
 &nbsp;&nbsp;&nbsp;I mainly focus for ***clean code, Java Spring, Java, Python, Javascript.***
 
 </br>
-//https://marcobackman.tistory.com/
 <ul style="list-style-type: none;" >
 </li>
     <li style="float:left;"><a href="https://marcobackman.tistory.com/" style="display:block;text-decoration: none;float:left;padding: 0px 25px;">Blog :link:</a></li>
