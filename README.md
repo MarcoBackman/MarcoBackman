@@ -73,7 +73,7 @@ Following lists are the projects where my contribution was involved.
   - Used JSP and JSTL to enhance object(model) view scripting.
   - Used MySQL for the DBMS tool.
 
-- [D* Lite algoritm analysis](https://github.com/CSE4081-d-star-team)
+- [D* Lite algoritm analysis](https://github.com/MarcoBackman/d-star-algorithm)
   - Coded with ***Python*** using pyGame framework and ***Java*** using Swing and AWT frameworks
   - Made GUI for point generators
   - Takes user input in GUI app.
