@@ -3,8 +3,8 @@
 ## Goal
 
 Turn the `MarcoBackman` profile README into a polished, animated portfolio that
-leads with Sung Jun "Tony" Baek's current work on production AI agents and
-manufacturing APS systems.
+positions Sung Jun "Tony" Baek's recent career around LLM AgentOps, supported by
+production AI-agent and manufacturing APS engineering work.
 
 The profile should feel visually memorable within the first screen, while the
 project descriptions remain specific, credible, and readable for engineering
@@ -78,7 +78,7 @@ Use `capsule-render` with a `waving` header, a fixed custom gradient, and a
 Displayed identity:
 
 > Sung Jun "Tony" Baek<br>
-> AI Agent & Manufacturing APS Engineer
+> LLM AgentOps Engineer
 
 The generated SVG URL will use explicit colors rather than random themes so the
 header and footer remain visually consistent on every visit.
@@ -87,16 +87,16 @@ header and footer remain visually consistent on every visit.
 
 Use `readme-typing-svg` with centered, looping lines:
 
-> Building production AI agents for complex decisions<br>
+> Operating LLM agents with reliability and observability<br>
 > Engineering manufacturing APS and scheduling systems<br>
-> Making Python services observable, testable, and reliable
+> Turning complex workflows into validated decisions
 
 Proposed introduction:
 
-> I am a software engineer focused on production AI agents, manufacturing
-> planning systems, and reliable Python backend platforms. I turn complex
-> operational workflows into systems that can plan, validate, explain, and
-> improve real-world decisions.
+> I am a software engineer specializing in LLM AgentOps: turning agentic
+> prototypes into observable, testable, and reliable production systems. I also
+> build manufacturing planning platforms where complex operational workflows
+> must become validated and explainable decisions.
 
 Contact badges:
 
@@ -126,13 +126,13 @@ an exact representation of the private system architecture. Target dimensions
 are approximately `960 × 360`, optimized to remain legible on GitHub without a
 large repository-size cost.
 
-### 4. Symphony — Production AI Agent for APS Analytics
+### 4. Symphony — LLM AgentOps for APS Analytics
 
 Proposed lead:
 
-> A production AI-agent platform that turns natural-language questions into
-> planned, validated, and observable analytical workflows for advanced planning
-> and scheduling.
+> A production AI-agent platform where LLM AgentOps practices make
+> natural-language analytical workflows observable, validated, cost-aware, and
+> reliable for advanced planning and scheduling.
 
 Verified contribution bullets:
 
@@ -177,15 +177,15 @@ Technical focus line:
 > `Python` · `Oracle SQL` · `GitHub Actions` · `pytest` · `Scheduling` ·
 > `Optimization` · `Manufacturing APS`
 
-### 6. Verified technology stack
+### 6. Verified LLM AgentOps technology stack
 
 Use the uniform icon/badge pattern popularized by GitHub Profile README
 Generator rather than an unstructured badge cloud.
 
 Groups:
 
-- **AI & Backend:** Python, FastAPI, LangChain, LangGraph
-- **Data & Observability:** Oracle, PostgreSQL, Prometheus, Grafana
+- **LLM AgentOps & Backend:** Python, FastAPI, LangChain, LangGraph
+- **Data & Observability:** SQL, Oracle, PostgreSQL, Prometheus, Grafana
 - **Cloud & Delivery:** AWS, Docker, Kubernetes, GitHub Actions
 - **Earlier full-stack foundation:** Java, Spring, JavaScript
 
