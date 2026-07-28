@@ -1,111 +1,95 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&amp;height=250&amp;color=0:0F172A,50:0EA5E9,100:8B5CF6&amp;text=Sung%20Jun%20%22Tony%22%20Baek&amp;fontSize=44&amp;fontColor=E2E8F0&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=LLM%20AgentOps%20Engineer&amp;descAlignY=58&amp;descSize=22" alt="Waving gradient header for Sung Jun Tony Baek, LLM AgentOps Engineer" width="100%" />
+</p>
 
-# Hi, I'm MarcoBackman
+<h1 align="center">Sung Jun "Tony" Baek</h1>
 
-**I'm MarcoBackman, a software developer 💻 currently looking for a project to work on.**
+<p align="center"><strong>LLM AgentOps Engineer</strong></p>
 
-&nbsp;&nbsp;&nbsp;I mainly focus for ***clean code, Java Spring, Java, Python, Javascript.***
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=20&amp;duration=2800&amp;pause=900&amp;color=22D3EE&amp;center=true&amp;vCenter=true&amp;width=900&amp;lines=Operating+LLM+agents+with+reliability+and+observability;Engineering+manufacturing+APS+and+scheduling+systems;Turning+complex+workflows+into+validated+decisions" alt="Operating LLM agents with reliability and observability; engineering manufacturing APS and scheduling systems; turning complex workflows into validated decisions" />
+</p>
 
-</br>
-<ul style="list-style-type: none;" >
-</li>
-    <li style="float:left;"><a href="https://marcobackman.tistory.com/" style="display:block;text-decoration: none;float:left;padding: 0px 25px;">Blog :link:</a></li>
-    <li style="float:left;"><a href="https://tcc2021seniorproject.github.io/" style="display:block;text-decoration: none;float:left;padding: 0px 25px;">Website 🌍</a></li>
-    <li style="float:left;"><a href="mailto:sbaek2015@my.fit.edu" style="display:block;text-decoration: none;float:left;padding: 0px 25px;">Email 📬</a></li>
-</ul>
+<p align="center">
+  <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://marcobackman.tistory.com/" aria-label="Technical blog">
+    <img src="https://img.shields.io/badge/Technical%20Blog-0F172A?style=for-the-badge&amp;logo=blogger&amp;logoColor=white" alt="Technical blog" />
+  </a>
+  <a href="mailto:sbaek2015@my.fit.edu" aria-label="Email Sung Jun Baek">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email Sung Jun Baek" />
+  </a>
+</p>
 
-</br>
-</br>
+<p align="center">
+  <img src="./assets/llm-agentops-flow.gif" alt="Animated LLM AgentOps flow from a user question through planning, query validation, and an explainable decision" width="960" />
+</p>
 
+I specialize in **LLM AgentOps**—turning agentic prototypes into observable,
+testable, cost-aware, and reliable production systems. I also build
+manufacturing planning platforms where complex operational workflows must
+become validated and explainable decisions.
 
-<div align="center">
-    <img align="center" height="150" src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&theme=cobalt&show_icons=true" />
-    <img align="center" height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&layout=compact" />
-</div>
+## Symphony — LLM AgentOps for APS Analytics
 
+> A production AI-agent platform where LLM AgentOps practices make
+> natural-language analytical workflows observable, validated, cost-aware, and
+> reliable for advanced planning and scheduling.
 
-</br>
+- Built and refined multi-step agent behavior across planning, SQL-assisted
+  analysis, validation, replanning, and report generation.
+- Centralized LLM execution paths so runtime context, token usage, inference
+  traces, and cost signals remain consistent across agent workflows.
+- Added regression coverage for prompt injection, execution context, and SQL
+  tooling to protect behavior during refactoring.
+- Expanded production observability with Prometheus metrics and Grafana
+  dashboards across agent, API, database, model, session, and tool layers.
+- Contributed operational controls for usage reporting and protected API
+  documentation access.
 
-## My recent public team project is [Model Based IoT](https://github.com/TCC2021SeniorProject)
+## Taelim — Manufacturing APS & Scheduling Engine
 
+> A manufacturing planning engine for order allocation, machine scheduling, and
+> lot composition in corrugated-packaging operations.
 
-</br>
-<div align="center">
-    <a href="https://github.com/TCC2021SeniorProject/ModelTranslator">
-    <img align="center" height="120" src="https://github-readme-stats.vercel.app/api/pin/?username=TCC2021SeniorProject&repo=ModelTranslator" />
-    </a>
-    <a href="https://github.com/TCC2021SeniorProject/TCC2021SeniorProject.github.io">
-    <img align="center" height="120" src="https://github-readme-stats.vercel.app/api/pin/?username=TCC2021SeniorProject&repo=TCC2021SeniorProject.github.io" />
-    </a>
-</div>
+- Prevented stale demand from being processed twice during lot composition.
+- Fixed confirmed-order recomposition flows so eligible orders remain in
+  factory-specific planning.
+- Refactored coating domain rules and strengthened work-in-progress and
+  order-length data integrity.
+- Added repeatable QA coverage with unit tests, integration datasets, and GitHub
+  Actions workflows.
+- Improved operational support with Oracle schema/index versioning,
+  configurable logging, and engine-result exports.
 
-</br>
+## Technology focus
 
-&nbsp;&nbsp;&nbsp;Model based IoT is a project that converts UPPAAL model into a python code so that user can directly inject the output code to embedded system.
+| LLM AgentOps | Platform engineering |
+| --- | --- |
+| LLM workflows · prompt-injection regression coverage · runtime traces · token and cost signals | Python · FastAPI · SQL-assisted analysis · PostgreSQL |
 
-</br>
-</br>
+| Observability & delivery | Manufacturing planning |
+| --- | --- |
+| Prometheus · Grafana · API operations · GitHub Actions | Java · Spring · Oracle · APS scheduling |
 
-### What algorithms are used? What have I learned?
+## Earlier experience
 
-> 1. Application of DFS,BFS, and other heap datastructures to store and traverse objects.
->
-> 2. Applied parser-tree data structure. Understanding of XML parsing algorithm.
->
-> 3. Organize an entire software structure to have better readability and better portability.
->
-> 4. Handling with various amount of class objects
->
-> 5. Synchronous and asynchronous function calls
->
-> 6. Server interaction with Raspberry Pi 4 and wireless devices
->
-> 7. Application of Java Spring framework with Gradle
+- [ModelTranslator](https://github.com/TCC2021SeniorProject/ModelTranslator) — model-based IoT tooling that translates UPPAAL models into Python-oriented embedded-system workflows.
+- [Hibernate quiz web app](https://github.com/MarcoBackman/hibernate_quiz_webapp) — a Spring Boot and Hibernate web application for working with relational data and protected routes.
+- [D* algorithm](https://github.com/MarcoBackman/d-star-algorithm) — pathfinding exploration implemented with Python/Pygame and Java desktop UI tooling.
 
-</br>
+## Public GitHub Snapshot
 
-## Check on my previous projects
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0F172A" alt="MarcoBackman's public GitHub contribution statistics" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0F172A" alt="Most-used languages in MarcoBackman's public GitHub repositories" height="170" />
+</p>
 
-Following lists are the projects where my contribution was involved.
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=MarcoBackman&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="MarcoBackman's public GitHub contribution streak" />
+</p>
 
-- [Quiz application with Spring Boot Hibernate - mySQL](https://github.com/MarcoBackman/hibernate_quiz_webapp)
-  - Used Criteria and HQL to interact with database to perform efficient ROM.
-  - Used Filter to unauthorized access to the restricted path.
-  - Used JSP and JSTL to enhance object(model) view scripting.
-  - Used MySQL for the DBMS tool.
-
-- [D* Lite algoritm analysis](https://github.com/MarcoBackman/d-star-algorithm)
-  - Coded with ***Python*** using pyGame framework and ***Java*** using Swing and AWT frameworks
-  - Made GUI for point generators
-  - Takes user input in GUI app.
-  - Generates text-based map based on user click
-  - Included dynamic editor for users to interact with the app
-  - Collaborated with others to implement effective path finding algorithm
-- [KNN Range Search analysis](https://github.com/MarcoBackman/RangeSearchAnalysis)
-  - Coded with ***Java*** and Batch
-  - An analitial program that compares the effectiveness of KNN algorithm over Brute-force(Euclidean distance)
-  - Application of KD-tree for KNN algorithm
-- [Embeded web application contest](https://github.com/MarcoBackman/2021ESWContest_webOS_3007)
-  - Coded with ***HTML, EJS, CSS, JavaScript***
-  - Made server-interactive webapplication
-  - Worked on ***AWS EC2*** cloud server on Ubuntu machine with ***PostgreSQL***
-  - Learned about interactive web and secured network communication
-  - Collaborated with three other teammembers
-- [CalendarUI](https://github.com/MarcoBackman/CalendarUI)
-  - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
-  - A calendar UI template for multi-purpose usage
-  - Used multiple app windows and interactive UI
-  - Used structured data storing algorithm(Object oriented) for efficient search time complexity.
-  - Full understanding of Java Calendar package
-- [Mine Sweeper with GUI](https://github.com/MarcoBackman/Mine-Sweeper)
-  - A simple mine sweeper game project
-  - Coded in ***Java***  using Swing and AWT frameworks with the combination of Batch
-  - Interacts with keyboard and mouse listeners
-- [Snake Game with GUI](https://github.com/MarcoBackman/Snake-Game)
-  - Coded with ***Java*** using Swing and AWT frameworks with the combination of Batch
-  - A simple snake game project
-  - Interacts with keyboard and mouse listeners
-  - Required to understand the threading process of Java event queue for better optimizations 
-- [Blender testing and debugging](https://github.com/TeamRocket3)
-  - Worked on C/C++ language and python
-  - Understood the concept of massive-scale bugfix/debugging process
-  - Understood the importance of the concise documentation and development infrastructures.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&amp;height=120&amp;section=footer&amp;color=0:0F172A,50:0EA5E9,100:8B5CF6" alt="Waving gradient footer" width="100%" />
+</p>
