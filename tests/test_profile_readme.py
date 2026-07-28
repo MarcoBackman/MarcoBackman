@@ -1,16 +1,35 @@
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
-from PIL import Image
+from PIL import Image, ImageFont
 
-from scripts.generate_agentops_gif import generate_gif
+from scripts.generate_agentops_gif import generate_gif, load_font
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class AgentOpsGifTests(unittest.TestCase):
+    def test_font_loading_falls_back_when_truetype_fonts_are_unavailable(self) -> None:
+        fallback_font = ImageFont.load_default()
+        with (
+            patch(
+                "scripts.generate_agentops_gif.ImageFont.truetype",
+                side_effect=OSError("font unavailable"),
+            ),
+            patch(
+                "scripts.generate_agentops_gif.ImageFont.load_default",
+                return_value=fallback_font,
+            ),
+        ):
+            try:
+                loaded_font = load_font(13)
+            except OSError:
+                self.fail("load_font did not use Pillow's safe default")
+            self.assertIs(loaded_font, fallback_font)
+
     def test_generator_creates_readable_looping_gif(self) -> None:
         with TemporaryDirectory() as directory:
             output = Path(directory) / "agentops.gif"
@@ -55,6 +74,12 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertGreaterEqual(self.readme.count("username=MarcoBackman"), 2)
         self.assertIn("user=MarcoBackman", self.readme)
         self.assertIn("Public GitHub Snapshot", self.readme)
+
+    def test_linkedin_badge_uses_tonys_public_profile(self) -> None:
+        self.assertIn(
+            'href="https://www.linkedin.com/in/sung-jun-tony-baek-9b505b11a"',
+            self.readme,
+        )
 
     def test_omits_unconfirmed_metrics_and_old_positioning(self) -> None:
         self.assertNotIn("90%", self.readme)

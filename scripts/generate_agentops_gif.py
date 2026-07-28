@@ -15,11 +15,30 @@ CYAN = (34, 211, 238)
 BLUE = (56, 189, 248)
 VIOLET = (139, 92, 246)
 STAGES = ("QUESTION", "PLAN", "QUERY", "VALIDATE", "INSIGHT")
+REGULAR_FONT_CANDIDATES = (
+    Path("C:/Windows/Fonts/consola.ttf"),
+    Path("/System/Library/Fonts/Menlo.ttc"),
+    Path("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"),
+    Path("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf"),
+    Path("DejaVuSansMono.ttf"),
+)
+BOLD_FONT_CANDIDATES = (
+    Path("C:/Windows/Fonts/consolab.ttf"),
+    Path("/System/Library/Fonts/Menlo.ttc"),
+    Path("/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"),
+    Path("/usr/share/fonts/truetype/liberation2/LiberationMono-Bold.ttf"),
+    Path("DejaVuSansMono-Bold.ttf"),
+)
 
 
-def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
-    filename = "consolab.ttf" if bold else "consola.ttf"
-    return ImageFont.truetype(str(Path("C:/Windows/Fonts") / filename), size)
+def load_font(size: int, bold: bool = False) -> ImageFont.ImageFont:
+    candidates = BOLD_FONT_CANDIDATES if bold else REGULAR_FONT_CANDIDATES
+    for candidate in candidates:
+        try:
+            return ImageFont.truetype(str(candidate), size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
 
 
 def mix(left: tuple[int, int, int], right: tuple[int, int, int], amount: float) -> tuple[int, int, int]:
