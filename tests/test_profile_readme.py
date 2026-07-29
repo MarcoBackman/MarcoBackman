@@ -5,10 +5,26 @@ from unittest.mock import patch
 
 from PIL import Image, ImageFont
 
+from scripts import generate_agentops_gif
 from scripts.generate_agentops_gif import generate_gif, load_font
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def assert_v2_gif_contract(test_case: unittest.TestCase, path: Path) -> None:
+    with Image.open(path) as image:
+        loop = image.info.get("loop")
+        durations = []
+        for frame_index in range(image.n_frames):
+            image.seek(frame_index)
+            durations.append(image.info.get("duration", 0))
+
+        test_case.assertEqual(image.format, "GIF")
+        test_case.assertEqual(image.size, (960, 540))
+        test_case.assertGreaterEqual(image.n_frames, 70)
+        test_case.assertEqual(loop, 0)
+        test_case.assertGreaterEqual(sum(durations), 12_000)
 
 
 class AgentOpsGifTests(unittest.TestCase):
@@ -30,26 +46,50 @@ class AgentOpsGifTests(unittest.TestCase):
                 self.fail("load_font did not use Pillow's safe default")
             self.assertIs(loaded_font, fallback_font)
 
-    def test_generator_creates_readable_looping_gif(self) -> None:
+    def test_generator_creates_professional_trace_gif(self) -> None:
         with TemporaryDirectory() as directory:
-            output = Path(directory) / "agentops.gif"
+            output = Path(directory) / "agentops-v2.gif"
             generate_gif(output)
+            assert_v2_gif_contract(self, output)
 
-            with Image.open(output) as image:
-                self.assertEqual(image.format, "GIF")
-                self.assertEqual(image.size, (960, 360))
-                self.assertGreaterEqual(image.n_frames, 30)
-                self.assertEqual(image.info.get("loop"), 0)
-                self.assertGreater(image.info.get("duration", 0), 0)
-
-    def test_workspace_asset_matches_generator_contract(self) -> None:
+    def test_workspace_asset_matches_v2_contract(self) -> None:
         asset = ROOT / "assets" / "llm-agentops-flow.gif"
         self.assertTrue(asset.exists())
-        self.assertLess(asset.stat().st_size, 4_000_000)
+        self.assertLess(asset.stat().st_size, 6_000_000)
+        assert_v2_gif_contract(self, asset)
 
-        with Image.open(asset) as image:
-            self.assertEqual(image.size, (960, 360))
-            self.assertGreaterEqual(image.n_frames, 30)
+    def test_v2_timeline_and_semantics_are_stable(self) -> None:
+        self.assertEqual(
+            (generate_agentops_gif.WIDTH, generate_agentops_gif.HEIGHT),
+            (960, 540),
+        )
+        self.assertEqual(generate_agentops_gif.FRAME_COUNT, 96)
+        self.assertEqual(generate_agentops_gif.FRAME_DURATION_MS, 140)
+        self.assertEqual(
+            generate_agentops_gif.STAGES,
+            (
+                "REQUEST",
+                "GUARDRAIL",
+                "CONTEXT",
+                "PLAN",
+                "TOOL / SQL",
+                "EVALUATE",
+                "REPLAN",
+                "REPORT",
+            ),
+        )
+        self.assertEqual(
+            getattr(generate_agentops_gif, "DECISION_TEXT", None),
+            "Prioritize 3 at-risk orders before capacity lock.",
+        )
+
+    def test_generator_is_deterministic_in_one_environment(self) -> None:
+        with TemporaryDirectory() as directory:
+            first = Path(directory) / "first.gif"
+            second = Path(directory) / "second.gif"
+            generate_gif(first)
+            generate_gif(second)
+            self.assertEqual(first.read_bytes(), second.read_bytes())
 
 
 class ProfileReadmeTests(unittest.TestCase):
@@ -86,6 +126,15 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertNotIn("15%", self.readme)
         self.assertNotIn("currently looking for a project", self.readme)
         self.assertNotIn("beak_heamin_saipan", self.readme)
+
+    def test_professional_gif_is_responsive_and_descriptive(self) -> None:
+        self.assertIn('src="./assets/llm-agentops-flow.gif"', self.readme)
+        self.assertIn('width="100%"', self.readme)
+        self.assertIn(
+            "guardrails, planning, tool execution, evaluation, replanning, "
+            "demo telemetry, and a verified decision",
+            self.readme,
+        )
 
 
 if __name__ == "__main__":
