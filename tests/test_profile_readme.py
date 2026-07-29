@@ -107,6 +107,10 @@ class ProfileReadmeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        korean_path = ROOT / "README.ko.md"
+        cls.korean_readme = (
+            korean_path.read_text(encoding="utf-8") if korean_path.exists() else ""
+        )
 
     def test_leads_with_llm_agentops_and_verified_projects(self) -> None:
         self.assertIn("LLM AgentOps Engineer", self.readme)
@@ -168,6 +172,72 @@ class ProfileReadmeTests(unittest.TestCase):
             "guardrails, planning, tool execution, evaluation, replanning, "
             "demo telemetry, and a verified decision",
             self.readme,
+        )
+
+    def test_links_english_and_korean_profiles_bidirectionally(self) -> None:
+        self.assertIn('href="./README.ko.md"', self.readme)
+        self.assertIn('href="./README.md"', self.korean_readme)
+        self.assertIn('href="./README.ko.md"', self.korean_readme)
+
+    def test_korean_profile_preserves_featured_project_order(self) -> None:
+        self.assertIn("LLM AgentOps 엔지니어", self.korean_readme)
+        self.assertLess(
+            self.korean_readme.index("Symphony"),
+            self.korean_readme.index("Taelim"),
+        )
+        self.assertLess(
+            self.korean_readme.index("Taelim"),
+            self.korean_readme.index("금융 서비스 플랫폼"),
+        )
+        self.assertLess(
+            self.korean_readme.index("금융 서비스 플랫폼"),
+            self.korean_readme.index("물류창고 디지털 트윈"),
+        )
+
+    def test_korean_profile_includes_curated_resume_evidence(self) -> None:
+        for expected in (
+            "초당 5,000개 이상의 메시지",
+            "3시간에서 15분",
+            "100만 건",
+            "60초에서 2초",
+            "시간당 40건에서 0건",
+            "대한민국 해군",
+            "Robolink",
+            "Florida Institute of Technology",
+            "SQL 개발자",
+            "데이터아키텍처 준전문가",
+            "네트워크관리사 2급",
+            "MS 365 Fundamentals",
+            "OPIc AL",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, self.korean_readme)
+
+    def test_korean_profile_reuses_visual_identity(self) -> None:
+        self.assertGreaterEqual(
+            self.korean_readme.count("capsule-render.vercel.app/api"),
+            2,
+        )
+        self.assertIn("readme-typing-svg.demolab.com", self.korean_readme)
+        self.assertIn("./assets/llm-agentops-flow.gif", self.korean_readme)
+        self.assertIn("github-readme-stats.vercel.app/api", self.korean_readme)
+        self.assertIn("streak-stats.demolab.com", self.korean_readme)
+
+    def test_korean_profile_excludes_resume_only_personal_data(self) -> None:
+        self.assertNotIn("주소:", self.korean_readme)
+        self.assertNotIn("생년월일", self.korean_readme)
+        self.assertNotIn("1995년 11월 29일", self.korean_readme)
+        for private_client in (
+            "DriveWealth",
+            "Navy Federal",
+            "OMRON",
+            "현대 무벡스",
+        ):
+            with self.subTest(private_client=private_client):
+                self.assertNotIn(private_client, self.korean_readme)
+        self.assertNotRegex(
+            self.korean_readme,
+            r"(?:\+?1[-.\s]?)?\d{3}[-.\s]\d{3}[-.\s]\d{4}",
         )
 
 
