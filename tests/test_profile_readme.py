@@ -107,12 +107,39 @@ class ProfileReadmeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        korean_path = ROOT / "README.ko.md"
+        cls.korean_readme = (
+            korean_path.read_text(encoding="utf-8") if korean_path.exists() else ""
+        )
 
     def test_leads_with_llm_agentops_and_verified_projects(self) -> None:
         self.assertIn("LLM AgentOps Engineer", self.readme)
         self.assertIn("Symphony — LLM AgentOps for APS Analytics", self.readme)
         self.assertIn("Taelim — Manufacturing APS & Scheduling Engine", self.readme)
         self.assertLess(self.readme.index("Symphony"), self.readme.index("Taelim"))
+
+    def test_includes_financial_and_digital_twin_platform_experience(self) -> None:
+        self.assertIn("Additional Platform Experience", self.readme)
+        self.assertIn(
+            "Financial Services Platform — Real-Time Fund Processing",
+            self.readme,
+        )
+        self.assertIn("BeaconFire Inc.", self.readme)
+        self.assertIn("100,000+ orders", self.readme)
+        self.assertIn("Kafka", self.readme)
+        self.assertIn("OpenShift", self.readme)
+        self.assertIn("Warehouse Digital Twin Service Platform", self.readme)
+        self.assertIn("VisionSpace", self.readme)
+        self.assertIn("MQTT", self.readme)
+        self.assertIn("AWS IoT", self.readme)
+        self.assertLess(
+            self.readme.index("Taelim — Manufacturing APS & Scheduling Engine"),
+            self.readme.index("Additional Platform Experience"),
+        )
+        self.assertLess(
+            self.readme.index("Additional Platform Experience"),
+            self.readme.index("Technology focus"),
+        )
 
     def test_integrates_requested_visual_services_and_local_gif(self) -> None:
         self.assertGreaterEqual(self.readme.count("capsule-render.vercel.app/api"), 2)
@@ -146,6 +173,130 @@ class ProfileReadmeTests(unittest.TestCase):
             "demo telemetry, and a verified decision",
             self.readme,
         )
+
+    def test_links_english_and_korean_profiles_bidirectionally(self) -> None:
+        self.assertIn('href="./README.ko.md"', self.readme)
+        self.assertIn('href="./README.md"', self.korean_readme)
+        self.assertIn('href="./README.ko.md"', self.korean_readme)
+
+    def test_korean_profile_preserves_featured_project_order(self) -> None:
+        self.assertIn("LLM AgentOps 엔지니어", self.korean_readme)
+        self.assertLess(
+            self.korean_readme.index("Symphony"),
+            self.korean_readme.index("Taelim"),
+        )
+        self.assertLess(
+            self.korean_readme.index("Taelim"),
+            self.korean_readme.index(
+                "### 금융 서비스 플랫폼 — 실시간 펀드 처리"
+            ),
+        )
+        self.assertLess(
+            self.korean_readme.index(
+                "### 금융 서비스 플랫폼 — 실시간 펀드 처리"
+            ),
+            self.korean_readme.index(
+                "### 물류창고 디지털 트윈 서비스 플랫폼"
+            ),
+        )
+
+    def test_korean_profile_includes_curated_resume_evidence(self) -> None:
+        normalized_korean_readme = " ".join(self.korean_readme.split())
+        for expected in (
+            "초당 5,000개 이상의 메시지",
+            "3시간에서 15분",
+            "100만 건",
+            "60초에서 2초",
+            "시간당 40건에서 0건",
+            "대한민국 해군",
+            "Robolink",
+            "Florida Institute of Technology",
+            "SQL 개발자",
+            "데이터아키텍처 준전문가",
+            "네트워크관리사 2급",
+            "MS 365 Fundamentals",
+            "OPIc AL",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, normalized_korean_readme)
+
+    def test_korean_profile_reuses_visual_identity(self) -> None:
+        self.assertGreaterEqual(
+            self.korean_readme.count("capsule-render.vercel.app/api"),
+            2,
+        )
+        self.assertIn("readme-typing-svg.demolab.com", self.korean_readme)
+        self.assertIn("./assets/llm-agentops-flow.gif", self.korean_readme)
+        self.assertIn("github-readme-stats.vercel.app/api", self.korean_readme)
+        self.assertIn("streak-stats.demolab.com", self.korean_readme)
+
+    def test_korean_profile_excludes_resume_only_personal_data(self) -> None:
+        self.assertNotIn("주소:", self.korean_readme)
+        self.assertNotIn("생년월일", self.korean_readme)
+        self.assertNotIn("1995년 11월 29일", self.korean_readme)
+        for private_client in (
+            "DriveWealth",
+            "Navy Federal",
+            "OMRON",
+            "현대 무벡스",
+        ):
+            with self.subTest(private_client=private_client):
+                self.assertNotIn(private_client, self.korean_readme)
+        self.assertNotRegex(
+            self.korean_readme,
+            r"(?:\+?1[-.\s]?)?\d{3}[-.\s]\d{3}[-.\s]\d{4}",
+        )
+
+    def test_english_profile_describes_agent_harnessing_in_english(self) -> None:
+        heading = "## Agent Harnessing & Workflow Engineering"
+        self.assertIn(heading, self.readme)
+        section = self.readme[
+            self.readme.index(heading) : self.readme.index(
+                "## Symphony — LLM AgentOps for APS Analytics"
+            )
+        ]
+        self.assertLess(
+            self.readme.index(heading),
+            self.readme.index("## Symphony"),
+        )
+        for expected in (
+            "Claude",
+            "Codex",
+            "context and task boundaries",
+            "tool permissions",
+            "verification gates",
+            "traceable handoffs",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, section)
+        self.assertIn("agent harnessing", self.readme)
+        self.assertIn("workflow orchestration", self.readme)
+        self.assertNotRegex(section, r"[가-힣]")
+
+    def test_korean_profile_describes_agent_harnessing_and_workflows(self) -> None:
+        heading = "## 에이전트 하네싱 및 워크플로 엔지니어링"
+        self.assertIn(heading, self.korean_readme)
+        section = self.korean_readme[
+            self.korean_readme.index(heading) : self.korean_readme.index(
+                "## Symphony — APS 분석을 위한 LLM AgentOps"
+            )
+        ]
+        self.assertLess(
+            self.korean_readme.index(heading),
+            self.korean_readme.index("## Symphony"),
+        )
+        for expected in (
+            "Claude",
+            "Codex",
+            "컨텍스트",
+            "도구 권한",
+            "검증 게이트",
+            "작업 인계",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, section)
+        self.assertIn("에이전트 하네싱", self.korean_readme)
+        self.assertIn("워크플로 오케스트레이션", self.korean_readme)
 
 
 if __name__ == "__main__":
