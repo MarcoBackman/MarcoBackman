@@ -247,6 +247,57 @@ class ProfileReadmeTests(unittest.TestCase):
             r"(?:\+?1[-.\s]?)?\d{3}[-.\s]\d{3}[-.\s]\d{4}",
         )
 
+    def test_english_profile_describes_agent_harnessing_in_english(self) -> None:
+        heading = "## Agent Harnessing & Workflow Engineering"
+        self.assertIn(heading, self.readme)
+        section = self.readme[
+            self.readme.index(heading) : self.readme.index(
+                "## Symphony — LLM AgentOps for APS Analytics"
+            )
+        ]
+        self.assertLess(
+            self.readme.index(heading),
+            self.readme.index("## Symphony"),
+        )
+        for expected in (
+            "Claude",
+            "Codex",
+            "context and task boundaries",
+            "tool permissions",
+            "verification gates",
+            "traceable handoffs",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, section)
+        self.assertIn("agent harnessing", self.readme)
+        self.assertIn("workflow orchestration", self.readme)
+        self.assertNotRegex(section, r"[가-힣]")
+
+    def test_korean_profile_describes_agent_harnessing_and_workflows(self) -> None:
+        heading = "## 에이전트 하네싱 및 워크플로 엔지니어링"
+        self.assertIn(heading, self.korean_readme)
+        section = self.korean_readme[
+            self.korean_readme.index(heading) : self.korean_readme.index(
+                "## Symphony — APS 분석을 위한 LLM AgentOps"
+            )
+        ]
+        self.assertLess(
+            self.korean_readme.index(heading),
+            self.korean_readme.index("## Symphony"),
+        )
+        for expected in (
+            "Claude",
+            "Codex",
+            "컨텍스트",
+            "도구 권한",
+            "검증 게이트",
+            "작업 인계",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, section)
+        self.assertIn("에이전트 하네싱", self.korean_readme)
+        self.assertIn("워크플로 오케스트레이션", self.korean_readme)
+
 
 if __name__ == "__main__":
     unittest.main()
