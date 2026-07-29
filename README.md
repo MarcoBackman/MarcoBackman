@@ -40,6 +40,22 @@ testable, cost-aware, and reliable production systems. I also build
 manufacturing planning platforms where complex operational workflows must
 become validated and explainable decisions.
 
+## Agent Harnessing & Workflow Engineering
+
+> I design Claude and Codex agent harnesses that turn open-ended development
+> tasks into controlled, repeatable, and reviewable engineering workflows.
+
+- Define scoped context and task boundaries so each agent receives the minimum
+  information and authority required for its role.
+- Configure tool permissions and controlled execution paths for repository,
+  browser, document, and delivery workflows.
+- Orchestrate plan → implementation → test → review → PR workflows with
+  explicit checkpoints and recovery paths.
+- Use verification gates, reviewable artifacts, and traceable handoffs to make
+  outcomes reproducible and auditable.
+- Separate implementation and review roles when independent validation improves
+  confidence.
+
 ## Symphony — LLM AgentOps for APS Analytics
 
 > A production AI-agent platform where LLM AgentOps practices make
@@ -111,7 +127,7 @@ become validated and explainable decisions.
 
 | LLM AgentOps | Backend & event systems |
 | --- | --- |
-| LLM workflows · prompt-injection regression coverage · runtime traces · token and cost signals | Python · FastAPI · Java · Spring Boot · Kafka · RabbitMQ · PostgreSQL |
+| Claude · Codex · agent harnessing · workflow orchestration · context engineering · verification gates · LLM workflows · runtime traces · token and cost signals | Python · FastAPI · Java · Spring Boot · Kafka · RabbitMQ · PostgreSQL |
 
 | Observability & cloud delivery | Digital twin & manufacturing |
 | --- | --- |
