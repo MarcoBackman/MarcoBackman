@@ -1,4 +1,9 @@
 <p align="center">
+  <a href="./README.md">English</a> |
+  <a href="./README.ko.md">한국어</a>
+</p>
+
+<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&amp;height=250&amp;color=0:0F172A,50:0EA5E9,100:8B5CF6&amp;text=Sung%20Jun%20%22Tony%22%20Baek&amp;fontSize=44&amp;fontColor=E2E8F0&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=LLM%20AgentOps%20Engineer&amp;descAlignY=58&amp;descSize=22" alt="Waving gradient header for Sung Jun Tony Baek, LLM AgentOps Engineer" width="100%" />
 </p>
 

@@ -187,14 +187,21 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertLess(
             self.korean_readme.index("Taelim"),
-            self.korean_readme.index("금융 서비스 플랫폼"),
+            self.korean_readme.index(
+                "### 금융 서비스 플랫폼 — 실시간 펀드 처리"
+            ),
         )
         self.assertLess(
-            self.korean_readme.index("금융 서비스 플랫폼"),
-            self.korean_readme.index("물류창고 디지털 트윈"),
+            self.korean_readme.index(
+                "### 금융 서비스 플랫폼 — 실시간 펀드 처리"
+            ),
+            self.korean_readme.index(
+                "### 물류창고 디지털 트윈 서비스 플랫폼"
+            ),
         )
 
     def test_korean_profile_includes_curated_resume_evidence(self) -> None:
+        normalized_korean_readme = " ".join(self.korean_readme.split())
         for expected in (
             "초당 5,000개 이상의 메시지",
             "3시간에서 15분",
@@ -211,7 +218,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "OPIc AL",
         ):
             with self.subTest(expected=expected):
-                self.assertIn(expected, self.korean_readme)
+                self.assertIn(expected, normalized_korean_readme)
 
     def test_korean_profile_reuses_visual_identity(self) -> None:
         self.assertGreaterEqual(
