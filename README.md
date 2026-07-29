@@ -67,15 +67,50 @@ become validated and explainable decisions.
 - Improved operational support with Oracle schema/index versioning,
   configurable logging, and engine-result exports.
 
+## Additional Platform Experience
+
+### Financial Services Platform — Real-Time Fund Processing
+
+> Software Developer at **BeaconFire Inc.**, contributing to a real-time
+> fund-processing platform for financial services.
+
+- Strengthened availability in OpenShift/Kubernetes by resolving liveness-probe
+  issues, reducing recurring health-check failures from 40 per hour to zero.
+- Designed multi-process, event-driven services with Kafka and AMQ/RabbitMQ
+  across Azure SQL, PostgreSQL, and DynamoDB, and refactored legacy code into an
+  order management system.
+- Optimized database-intensive batch processing for 100,000+ orders through
+  caching, batching, and indexing.
+- Supported Azure disaster recovery and failover, Sumo Logic/Log4j2 monitoring,
+  and Veracode vulnerability remediation.
+- Established Docker/Flyway test environments and applied TDD with JUnit 5 and
+  Mockito to improve deployment stability.
+
+### Warehouse Digital Twin Service Platform
+
+> Full-Stack Engineer at **VisionSpace**, building a hybrid-cloud digital-twin
+> service platform for warehouse operations.
+
+- Designed Java/Spring Boot microservices across on-premise and AWS
+  infrastructure, with Jenkins delivery pipelines targeting EC2, ECR, and ECS.
+- Built a React/TypeScript frontend and web application server for visualizing
+  and interacting with dynamic digital-twin simulations.
+- Developed a .NET/C# stress-testing application that simulated high-concurrency
+  robotic-device traffic through MQTT, WebSocket, and AWS IoT.
+- Integrated LLM, RAG, and computer-vision capabilities with the platform to
+  expand intelligent search, analysis, and visual processing workflows.
+- Supported production connectivity and scaling with Route 53, ACM, S3,
+  security controls, and load-balanced AWS services.
+
 ## Technology focus
 
-| LLM AgentOps | Platform engineering |
+| LLM AgentOps | Backend & event systems |
 | --- | --- |
-| LLM workflows · prompt-injection regression coverage · runtime traces · token and cost signals | Python · FastAPI · SQL-assisted analysis · PostgreSQL |
+| LLM workflows · prompt-injection regression coverage · runtime traces · token and cost signals | Python · FastAPI · Java · Spring Boot · Kafka · RabbitMQ · PostgreSQL |
 
-| Observability & delivery | Manufacturing planning |
+| Observability & cloud delivery | Digital twin & manufacturing |
 | --- | --- |
-| Prometheus · Grafana · API operations · GitHub Actions | Java · Spring · Oracle · APS scheduling |
+| Prometheus · Grafana · GitHub Actions · Jenkins · Docker · Kubernetes/OpenShift · AWS · Azure | MQTT · WebSocket · AWS IoT · React · TypeScript · Oracle · APS scheduling |
 
 ## Earlier experience
 
