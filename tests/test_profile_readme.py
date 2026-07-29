@@ -91,6 +91,17 @@ class AgentOpsGifTests(unittest.TestCase):
             generate_gif(second)
             self.assertEqual(first.read_bytes(), second.read_bytes())
 
+    def test_final_decision_checkmark_is_drawn_without_font_glyphs(self) -> None:
+        frame = generate_agentops_gif.draw_frame(
+            generate_agentops_gif.FRAME_COUNT - 1
+        )
+        for point in ((896, 501), (900, 505), (907, 496)):
+            with self.subTest(point=point):
+                self.assertEqual(
+                    frame.getpixel(point),
+                    generate_agentops_gif.BACKGROUND,
+                )
+
 
 class ProfileReadmeTests(unittest.TestCase):
     @classmethod

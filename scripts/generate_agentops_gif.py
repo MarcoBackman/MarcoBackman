@@ -431,12 +431,25 @@ def draw_trace_waterfall(
                 radius=4,
                 fill=color,
             )
-        marker = "○"
-        if start_ms <= current < end_ms:
-            marker = "●"
-        elif current >= end_ms:
-            marker = "✓"
-        draw.text((610, y), marker, font=small_font, fill=color)
+        marker_x = 617
+        marker_y = y + 8
+        if current < start_ms:
+            draw.ellipse(
+                (marker_x - 3, marker_y - 3, marker_x + 3, marker_y + 3),
+                outline=LINE,
+                width=1,
+            )
+        elif current < end_ms:
+            draw.ellipse(
+                (marker_x - 4, marker_y - 4, marker_x + 4, marker_y + 4),
+                outline=color,
+                width=2,
+            )
+        else:
+            draw.ellipse(
+                (marker_x - 4, marker_y - 4, marker_x + 4, marker_y + 4),
+                fill=color,
+            )
 
 
 def draw_demo_telemetry(
@@ -514,7 +527,8 @@ def draw_decision_strip(
         (check_x - 10, 491, check_x + 10, 511),
         fill=mix(PANEL_RAISED, SUCCESS, reveal),
     )
-    draw.text((check_x - 5, 492), "✓", font=small_font, fill=BACKGROUND)
+    draw.line((896, 501, 900, 505), fill=BACKGROUND, width=3)
+    draw.line((900, 505, 907, 496), fill=BACKGROUND, width=3)
 
 
 def draw_frame(frame_index: int) -> Image.Image:
