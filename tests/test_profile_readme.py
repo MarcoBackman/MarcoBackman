@@ -114,6 +114,29 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertIn("Taelim — Manufacturing APS & Scheduling Engine", self.readme)
         self.assertLess(self.readme.index("Symphony"), self.readme.index("Taelim"))
 
+    def test_includes_financial_and_digital_twin_platform_experience(self) -> None:
+        self.assertIn("Additional Platform Experience", self.readme)
+        self.assertIn(
+            "Financial Services Platform — Real-Time Fund Processing",
+            self.readme,
+        )
+        self.assertIn("BeaconFire Inc.", self.readme)
+        self.assertIn("100,000+ orders", self.readme)
+        self.assertIn("Kafka", self.readme)
+        self.assertIn("OpenShift", self.readme)
+        self.assertIn("Warehouse Digital Twin Service Platform", self.readme)
+        self.assertIn("VisionSpace", self.readme)
+        self.assertIn("MQTT", self.readme)
+        self.assertIn("AWS IoT", self.readme)
+        self.assertLess(
+            self.readme.index("Taelim — Manufacturing APS & Scheduling Engine"),
+            self.readme.index("Additional Platform Experience"),
+        )
+        self.assertLess(
+            self.readme.index("Additional Platform Experience"),
+            self.readme.index("Technology focus"),
+        )
+
     def test_integrates_requested_visual_services_and_local_gif(self) -> None:
         self.assertGreaterEqual(self.readme.count("capsule-render.vercel.app/api"), 2)
         self.assertIn("readme-typing-svg.demolab.com", self.readme)
