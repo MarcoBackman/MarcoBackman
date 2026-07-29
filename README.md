@@ -23,7 +23,11 @@
 </p>
 
 <p align="center">
-  <img src="./assets/llm-agentops-flow.gif" alt="Animated LLM AgentOps flow from a user question through planning, query validation, and an explainable decision" width="960" />
+  <img
+    src="./assets/llm-agentops-flow.gif"
+    alt="Animated LLM AgentOps production trace showing guardrails, planning, tool execution, evaluation, replanning, demo telemetry, and a verified decision"
+    width="100%"
+  />
 </p>
 
 I specialize in **LLM AgentOps**—turning agentic prototypes into observable,
