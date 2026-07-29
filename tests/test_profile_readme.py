@@ -1,0 +1,152 @@
+from pathlib import Path
+from tempfile import TemporaryDirectory
+import unittest
+from unittest.mock import patch
+
+from PIL import Image, ImageFont
+
+from scripts import generate_agentops_gif
+from scripts.generate_agentops_gif import generate_gif, load_font
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def assert_v2_gif_contract(test_case: unittest.TestCase, path: Path) -> None:
+    with Image.open(path) as image:
+        loop = image.info.get("loop")
+        durations = []
+        for frame_index in range(image.n_frames):
+            image.seek(frame_index)
+            durations.append(image.info.get("duration", 0))
+
+        test_case.assertEqual(image.format, "GIF")
+        test_case.assertEqual(image.size, (960, 540))
+        test_case.assertGreaterEqual(image.n_frames, 70)
+        test_case.assertEqual(loop, 0)
+        test_case.assertGreaterEqual(sum(durations), 12_000)
+
+
+class AgentOpsGifTests(unittest.TestCase):
+    def test_font_loading_falls_back_when_truetype_fonts_are_unavailable(self) -> None:
+        fallback_font = ImageFont.load_default()
+        with (
+            patch(
+                "scripts.generate_agentops_gif.ImageFont.truetype",
+                side_effect=OSError("font unavailable"),
+            ),
+            patch(
+                "scripts.generate_agentops_gif.ImageFont.load_default",
+                return_value=fallback_font,
+            ),
+        ):
+            try:
+                loaded_font = load_font(13)
+            except OSError:
+                self.fail("load_font did not use Pillow's safe default")
+            self.assertIs(loaded_font, fallback_font)
+
+    def test_generator_creates_professional_trace_gif(self) -> None:
+        with TemporaryDirectory() as directory:
+            output = Path(directory) / "agentops-v2.gif"
+            generate_gif(output)
+            assert_v2_gif_contract(self, output)
+
+    def test_workspace_asset_matches_v2_contract(self) -> None:
+        asset = ROOT / "assets" / "llm-agentops-flow.gif"
+        self.assertTrue(asset.exists())
+        self.assertLess(asset.stat().st_size, 6_000_000)
+        assert_v2_gif_contract(self, asset)
+
+    def test_v2_timeline_and_semantics_are_stable(self) -> None:
+        self.assertEqual(
+            (generate_agentops_gif.WIDTH, generate_agentops_gif.HEIGHT),
+            (960, 540),
+        )
+        self.assertEqual(generate_agentops_gif.FRAME_COUNT, 96)
+        self.assertEqual(generate_agentops_gif.FRAME_DURATION_MS, 140)
+        self.assertEqual(
+            generate_agentops_gif.STAGES,
+            (
+                "REQUEST",
+                "GUARDRAIL",
+                "CONTEXT",
+                "PLAN",
+                "TOOL / SQL",
+                "EVALUATE",
+                "REPLAN",
+                "REPORT",
+            ),
+        )
+        self.assertEqual(
+            getattr(generate_agentops_gif, "DECISION_TEXT", None),
+            "Prioritize 3 at-risk orders before capacity lock.",
+        )
+
+    def test_generator_is_deterministic_in_one_environment(self) -> None:
+        with TemporaryDirectory() as directory:
+            first = Path(directory) / "first.gif"
+            second = Path(directory) / "second.gif"
+            generate_gif(first)
+            generate_gif(second)
+            self.assertEqual(first.read_bytes(), second.read_bytes())
+
+    def test_final_decision_checkmark_is_drawn_without_font_glyphs(self) -> None:
+        frame = generate_agentops_gif.draw_frame(
+            generate_agentops_gif.FRAME_COUNT - 1
+        )
+        for point in ((896, 501), (900, 505), (907, 496)):
+            with self.subTest(point=point):
+                self.assertEqual(
+                    frame.getpixel(point),
+                    generate_agentops_gif.BACKGROUND,
+                )
+
+
+class ProfileReadmeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.readme = (ROOT / "README.md").read_text(encoding="utf-8")
+
+    def test_leads_with_llm_agentops_and_verified_projects(self) -> None:
+        self.assertIn("LLM AgentOps Engineer", self.readme)
+        self.assertIn("Symphony — LLM AgentOps for APS Analytics", self.readme)
+        self.assertIn("Taelim — Manufacturing APS & Scheduling Engine", self.readme)
+        self.assertLess(self.readme.index("Symphony"), self.readme.index("Taelim"))
+
+    def test_integrates_requested_visual_services_and_local_gif(self) -> None:
+        self.assertGreaterEqual(self.readme.count("capsule-render.vercel.app/api"), 2)
+        self.assertIn("readme-typing-svg.demolab.com", self.readme)
+        self.assertIn("./assets/llm-agentops-flow.gif", self.readme)
+        self.assertIn("github-readme-stats.vercel.app/api", self.readme)
+        self.assertIn("streak-stats.demolab.com", self.readme)
+
+    def test_public_stats_use_profile_username(self) -> None:
+        self.assertGreaterEqual(self.readme.count("username=MarcoBackman"), 2)
+        self.assertIn("user=MarcoBackman", self.readme)
+        self.assertIn("Public GitHub Snapshot", self.readme)
+
+    def test_linkedin_badge_uses_tonys_public_profile(self) -> None:
+        self.assertIn(
+            'href="https://www.linkedin.com/in/sung-jun-tony-baek-9b505b11a"',
+            self.readme,
+        )
+
+    def test_omits_unconfirmed_metrics_and_old_positioning(self) -> None:
+        self.assertNotIn("90%", self.readme)
+        self.assertNotIn("15%", self.readme)
+        self.assertNotIn("currently looking for a project", self.readme)
+        self.assertNotIn("beak_heamin_saipan", self.readme)
+
+    def test_professional_gif_is_responsive_and_descriptive(self) -> None:
+        self.assertIn('src="./assets/llm-agentops-flow.gif"', self.readme)
+        self.assertIn('width="100%"', self.readme)
+        self.assertIn(
+            "guardrails, planning, tool execution, evaluation, replanning, "
+            "demo telemetry, and a verified decision",
+            self.readme,
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
