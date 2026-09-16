@@ -162,6 +162,8 @@
 
 ## 공개 GitHub 활동
 
+**개인 계정 — [@MarcoBackman](https://github.com/MarcoBackman)**
+
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MarcoBackman&amp;theme=tokyonight" alt="MarcoBackman의 공개 GitHub 기여 통계" height="170" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MarcoBackman&amp;theme=tokyonight" alt="MarcoBackman 공개 저장소의 주요 사용 언어" height="170" />
@@ -169,6 +171,16 @@
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=MarcoBackman&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="MarcoBackman의 공개 GitHub 연속 기여 통계" />
+</p>
+
+**업무 계정 — [@sungjunbaek-cloud](https://github.com/sungjunbaek-cloud)**
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=sungjunbaek-cloud&amp;theme=tokyonight" alt="업무 계정 sungjunbaek-cloud의 공개 GitHub 기여 통계" height="170" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=sungjunbaek-cloud&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="업무 계정 sungjunbaek-cloud의 공개 GitHub 연속 기여 통계" />
 </p>
 
 <p align="center">

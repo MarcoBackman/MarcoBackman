@@ -141,6 +141,8 @@ become validated and explainable decisions.
 
 ## Public GitHub Snapshot
 
+**Personal — [@MarcoBackman](https://github.com/MarcoBackman)**
+
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MarcoBackman&amp;theme=tokyonight" alt="MarcoBackman's public GitHub contribution statistics" height="170" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MarcoBackman&amp;theme=tokyonight" alt="Most-used languages in MarcoBackman's public GitHub repositories" height="170" />
@@ -148,6 +150,16 @@ become validated and explainable decisions.
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=MarcoBackman&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="MarcoBackman's public GitHub contribution streak" />
+</p>
+
+**Work — [@sungjunbaek-cloud](https://github.com/sungjunbaek-cloud)**
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=sungjunbaek-cloud&amp;theme=tokyonight" alt="sungjunbaek-cloud's public GitHub contribution statistics (work account)" height="170" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=sungjunbaek-cloud&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="sungjunbaek-cloud's public GitHub contribution streak (work account)" />
 </p>
 
 <p align="center">
