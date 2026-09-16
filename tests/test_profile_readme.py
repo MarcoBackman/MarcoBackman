@@ -145,7 +145,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertGreaterEqual(self.readme.count("capsule-render.vercel.app/api"), 2)
         self.assertIn("readme-typing-svg.demolab.com", self.readme)
         self.assertIn("./assets/llm-agentops-flow.gif", self.readme)
-        self.assertIn("github-readme-stats.vercel.app/api", self.readme)
+        self.assertIn("github-profile-summary-cards.vercel.app/api/cards", self.readme)
         self.assertIn("streak-stats.demolab.com", self.readme)
 
     def test_public_stats_use_profile_username(self) -> None:
@@ -227,7 +227,9 @@ class ProfileReadmeTests(unittest.TestCase):
         )
         self.assertIn("readme-typing-svg.demolab.com", self.korean_readme)
         self.assertIn("./assets/llm-agentops-flow.gif", self.korean_readme)
-        self.assertIn("github-readme-stats.vercel.app/api", self.korean_readme)
+        self.assertIn(
+            "github-profile-summary-cards.vercel.app/api/cards", self.korean_readme
+        )
         self.assertIn("streak-stats.demolab.com", self.korean_readme)
 
     def test_korean_profile_excludes_resume_only_personal_data(self) -> None:

@@ -163,8 +163,8 @@
 ## 공개 GitHub 활동
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MarcoBackman&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0F172A" alt="MarcoBackman의 공개 GitHub 기여 통계" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarcoBackman&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0F172A" alt="MarcoBackman 공개 저장소의 주요 사용 언어" height="170" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MarcoBackman&amp;theme=tokyonight" alt="MarcoBackman의 공개 GitHub 기여 통계" height="170" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MarcoBackman&amp;theme=tokyonight" alt="MarcoBackman 공개 저장소의 주요 사용 언어" height="170" />
 </p>
 
 <p align="center">
