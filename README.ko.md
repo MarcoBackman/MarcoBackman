@@ -176,12 +176,16 @@
 **업무 계정 — [@sungjunbaek-cloud](https://github.com/sungjunbaek-cloud)**
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=sungjunbaek-cloud&amp;theme=tokyonight" alt="업무 계정 sungjunbaek-cloud의 공개 GitHub 기여 통계" height="170" />
-</p>
-
-<p align="center">
   <img src="https://streak-stats.demolab.com?user=sungjunbaek-cloud&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="업무 계정 sungjunbaek-cloud의 공개 GitHub 연속 기여 통계" />
 </p>
+
+**이전 직장 계정 — [@TonyBaek2023](https://github.com/TonyBaek2023)**
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=TonyBaek2023&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="이전 직장 계정 TonyBaek2023의 공개 GitHub 연속 기여 통계" />
+</p>
+
+_업무 계정의 활동은 비공개 저장소에 있어 GitHub이 기여 합계만 공개합니다._
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&amp;height=120&amp;section=footer&amp;color=0:0F172A,50:0EA5E9,100:8B5CF6" alt="그라데이션 물결 푸터" width="100%" />

@@ -152,7 +152,7 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertGreaterEqual(self.readme.count("username=MarcoBackman"), 2)
         self.assertIn("user=MarcoBackman", self.readme)
         self.assertIn("Public GitHub Snapshot", self.readme)
-        self.assertIn("username=sungjunbaek-cloud", self.readme)
+        self.assertIn("user=TonyBaek2023", self.readme)
         self.assertIn("user=sungjunbaek-cloud", self.readme)
 
     def test_linkedin_badge_uses_tonys_public_profile(self) -> None:
@@ -233,7 +233,7 @@ class ProfileReadmeTests(unittest.TestCase):
             "github-profile-summary-cards.vercel.app/api/cards", self.korean_readme
         )
         self.assertIn("streak-stats.demolab.com", self.korean_readme)
-        self.assertIn("username=sungjunbaek-cloud", self.korean_readme)
+        self.assertIn("user=TonyBaek2023", self.korean_readme)
         self.assertIn("user=sungjunbaek-cloud", self.korean_readme)
 
     def test_korean_profile_excludes_resume_only_personal_data(self) -> None:
