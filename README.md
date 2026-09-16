@@ -155,12 +155,16 @@ become validated and explainable decisions.
 **Work — [@sungjunbaek-cloud](https://github.com/sungjunbaek-cloud)**
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=sungjunbaek-cloud&amp;theme=tokyonight" alt="sungjunbaek-cloud's public GitHub contribution statistics (work account)" height="170" />
-</p>
-
-<p align="center">
   <img src="https://streak-stats.demolab.com?user=sungjunbaek-cloud&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="sungjunbaek-cloud's public GitHub contribution streak (work account)" />
 </p>
+
+**Previous work — [@TonyBaek2023](https://github.com/TonyBaek2023)**
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=TonyBaek2023&amp;theme=tokyonight&amp;hide_border=true&amp;background=0F172A" alt="TonyBaek2023's public GitHub contribution streak (previous work account)" />
+</p>
+
+_Work accounts contribute to private repositories, so GitHub exposes only their contribution totals._
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&amp;height=120&amp;section=footer&amp;color=0:0F172A,50:0EA5E9,100:8B5CF6" alt="Waving gradient footer" width="100%" />
